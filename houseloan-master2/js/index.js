@@ -29,14 +29,14 @@ $(function() {
 
 	$("#goufanglilv").click(function() {
 		$("#goufanglilv").children("a").css("color","#d9534f");
-		$("##goufangzhekou").children("a").css("color","#337ab7");
+		$("#goufangzhekou").children("a").css("color","#337ab7");
 		$("#gfzk").hide();
 		$("#gfll").show();
 
 	});
 
 	$("#goufangzhekou").click(function() {
-		$("##goufangzhekou").children("a").css("color","#d9534f");
+		$("#goufangzhekou").children("a").css("color","#d9534f");
 		$("#goufanglilv").children("a").css("color","#337ab7");
 		$("#gfll").hide();
 		$("#gfzk").show();
@@ -45,14 +45,14 @@ $(function() {
 
 	$("#goufanglilv").on("touchend", function() {
 		$("#goufanglilv").children("a").css("color","#d9534f");
-		$("##goufangzhekou").children("a").css("color","#337ab7");
+		$("#goufangzhekou").children("a").css("color","#337ab7");
 		$("#gfzk").hide();
 		$("#gfll").show();
 
 	});
 
 	$("#goufangzhekou").on("touchend", function() {
-		$("##goufangzhekou").children("a").css("color","#d9534f");
+		$("#goufangzhekou").children("a").css("color","#d9534f");
 		$("#goufanglilv").children("a").css("color","#337ab7");
 		$("#gfll").hide();
 		$("#gfzk").show();
