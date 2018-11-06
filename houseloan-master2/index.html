@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>购房折扣优惠计算</title>
+		<link rel="stylesheet" href="css/bootstrap_min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row text-center">
+				<ul class="nav nav-tabs">
+				  <li id="goufanglilv" role="presentation" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				  	<a href="#">购房贷款利率计算</a>
+				  	
+				  </li>
+				  <li id="goufangzhekou" role="presentation" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				  	<a href="#">房地产优惠折扣计算</a>
+				  </li>
+				</ul>
+				
+				<form id="gfzk" action="javascript:void(0)" method="post" style="margin-top: 1rem;">
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">房款总价:</span>
+					  <input id="money" type="number" min="1" class="form-control" placeholder="请输入要计算的房款价格" value="1000000" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="input-group" style="margin-top: 1rem; margin-bottom: 1rem;">
+					  <input placeholder="请输入相关优惠折扣" type="number" min="1" max="100" class="form-control zhekou" aria-label="..." value="95">
+					  <div class="input-group-btn">
+					    <div class="btn-group">
+						  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						   %&nbsp;&nbsp;&nbsp;优惠折扣<span class="caret"></span>
+						  </button>
+						    	<ul id="youhui" class="dropdown-menu dropdown-menu-right ">
+						          <li><a val="0.99" class="text-center" href="javascript:void(0)">优惠1个点</a></li>
+						          <li><a val="0.98" class="text-center" href="javascript:void(0)">优惠2个点</a></li>
+						          <li><a val="0.97" class="text-center" href="javascript:void(0)">优惠3个点</a></li>
+						          <!--<li role="separator" class="divider"></li>-->
+						          <li><a val="0.96" class="text-center" href="javascript:void(0)">优惠4个点</a></li>
+						          <li><a val="0.95" class="text-center" href="javascript:void(0)">优惠5个点</a></li>
+						          <li><a val="0.94" class="text-center" href="javascript:void(0)">优惠6个点</a></li>
+						          <li><a val="0.93" class="text-center" href="javascript:void(0)">优惠7个点</a></li>
+						          <li><a val="0.92" class="text-center" href="javascript:void(0)">优惠8个点</a></li>
+						          <li><a val="0.91" class="text-center" href="javascript:void(0)">优惠9个点</a></li>
+						          <li><a val="0.90" class="text-center" href="javascript:void(0)">优惠10个点</a></li>
+						        </ul>
+						</div>
+					  </div>
+					</div>
+					
+					<div class="input-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<input name="sub" type="submit" class="form-control btn btn-danger" value="开始计算" style="z-index: 0;" />
+					</div>
+					<div class="container" style="margin-top: 5rem;">
+						<div id="show" class="row text-center" style="display: none;">
+							<div>计算后结果为:</div>
+							<span id="result" style="color:tomato; font-size: 2.4rem;">666666</span>元
+						</div>
+					</div>	
+				</form>
+			</div>
+			
+			
+			<div id="gfll" style="display: none; margin-top: 2.5rem; font-size: 1rem;">
+				<h3 style="font-size: 1.2rem;">住房商业贷款利率</h3>
+				<p>自2013年1月14日起下调金融机构人民币存贷款基准利率。金融机构存贷款基准利率分别下调。</p>
+				<table class="table table-striped">
+				    <thead>
+				    <tr>
+				        <th>利率项目</th>
+				        <th>年利率(%)</th>
+				    </tr>
+				    </thead>
+				    <tbody>
+				    <tr>
+				        <td>六个月以内（含6个月）贷款</td>
+				        <td>5.6</td>
+				    </tr>
+				    <tr>
+				        <td>六个月至一年（含1年）贷款</td>
+				        <td>6.00</td>
+				    </tr>
+				    <tr>
+				        <td>一至三年（含3年）贷款</td>
+				        <td>6.15</td>
+				    </tr>
+				    <tr>
+				        <td>三至五年（含5年）贷款</td>
+				        <td>6.4</td>
+				    </tr>
+				    <tr>
+				        <td>五年以上贷款</td>
+				        <td>6.55</td>
+				    </tr>
+				    </tbody>
+				</table>
+				
+				<h3 style="font-size: 1.2rem; margin-top: 2.5rem;">公积金贷款利率</h3>
+				<p>从2011年7月7日起，开展利用住房公积金贷款支持保障性住房建设试点工作的城市，贷款利率按照五年期以上个人住房公积金贷款利率上浮10%执行。</p>
+				<table class="table table-striped">
+				    <thead>
+				    <tr>
+				        <th>项 目</th>
+				        <th>调整前利率</th>
+				        <th>调整后利率</th>
+				    </tr>
+				    </thead>
+				    <tbody>
+				    <tr>
+				        <td>一、个人住房公积金存款</td>
+				    </tr>
+				    <tr>
+				        <td>当年缴存</td>
+				        <td>0.50</td>
+				        <td>0.50</td>
+				    </tr>
+				    <tr>
+				        <td>上年结转</td>
+				        <td>2.85</td>
+				        <td>3.10</td>
+				    </tr>
+				    <tr>
+				        <td>二、个人住房公积金贷款</td>
+				    </tr>
+				    <tr>
+				        <td>五年以下（含五年)</td>
+				        <td>4.20</td>
+				        <td>4.45</td>
+				    </tr>
+				    <tr>
+				        <td>五年以上</td>
+				        <td>4.70</td>
+				        <td>4.90</td>
+				    </tr>
+				    <tr>
+				        <td>三、试点项目贷款</td>
+				        <td>按五年以上个人住房公积金贷款利率上浮10%</td>
+				        <td>同前</td>
+				    </tr>
+				    </tbody>
+				</table>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/rem.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				function setRem() {
+					var clientWidth = $(window).width();
+					var nowRem = (clientWidth / 320 * 10);
+					$("html").css("font-size", parseInt(nowRem, 10) + "px");
+				};
+				setRem();
+
+				$(function() {
+					var timer;
+					$(window).bind("resize", function() {
+						clearTimeout(timer);
+						timer = setTimeout(function() {
+							setRem();
+						}, 100)
+					})
+				});
+				
+		
+				/*移动端布局不兼容ipad和ipad pro 解决方法*/
+				/(iPhone|iPad|iPhone OS|Phone|iPod|iOS)/i.test(navigator.userAgent) && (head = document.getElementsByTagName(“head”), viewport = document.createElement(“meta”), viewport.name = ”viewport”, viewport.content = ”target - densitydpi = device - dpi, width = 480 px, user - scalable = no”, head.length > 0 && head[head.length - 1].appendChild(viewport));
+			
+			});
+		</script>
+		
+	</body>
+</html>

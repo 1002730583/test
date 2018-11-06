@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+html{
+	font-size: 10px;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: #d9534f;
+}
+.dropdown-menu li {
+	padding: 0.2rem 0rem;
+}
+.container{
+	font-size: 1.5rem;
+}
+.col-md-6{
+		padding: 0;
+	}
+/*兼容iphone 6 7 8*/
+@media only screen and (device-width: 375px) and (device-height: 667px) {
+	body{
+		font-size: 2rem;
+	}
+	.col-md-6{
+		padding: 0;
+	}
+}
+/*兼容iphone 6 plus*/
+@media only screen and (device-width: 414px) and (device-height: 736px) {
+	body{
+		font-size: 2rem;
+	}
+	.col-md-6{
+		padding: 0;
+	}
+}
+/*兼容iphone 6 plus*/
+@media only screen and (device-width: 320px) and (device-height: 568px) {
+	body{
+		font-size: 2.3rem;
+	}
+	.col-md-6{
+		padding: 0;
+	}
+}
+body{
+		font-size: 1.6rem;
+	}
+th{
+	width: 33.333%;
+}
